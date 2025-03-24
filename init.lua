@@ -1008,6 +1008,13 @@ require('lazy').setup({
           -- Custom mappings if needed
         },
       },
+      filesystem = {
+        filtered_items = {
+          visible = true, -- This shows hidden files by default
+          hide_dotfiles = false, -- Set to false to show dotfiles
+          hide_gitignored = false, -- Set to false to show git ignored files
+        },
+      },
       close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
     },
     -- Load the plugin at startup
@@ -1023,7 +1030,6 @@ require('lazy').setup({
       end
     end,
   },
-
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
   --
