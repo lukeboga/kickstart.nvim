@@ -192,6 +192,17 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- [[ Buffers ]]
+-- Close buffer
+-- Add this in the [[ Basic Keymaps ]] section of your init.lua
+-- Buffer management keymaps
+vim.keymap.set('n', '<leader>bc', '<cmd>bd<CR>', { desc = '[B]uffer [C]lose' })
+vim.keymap.set('n', '<leader>bn', '<cmd>bnext<CR>', { desc = '[B]uffer [N]ext' })
+vim.keymap.set('n', '<leader>bp', '<cmd>bprevious<CR>', { desc = '[B]uffer [P]revious' })
+vim.keymap.set('n', '<leader>bf', '<cmd>bfirst<CR>', { desc = '[B]uffer [F]irst' })
+vim.keymap.set('n', '<leader>bl', '<cmd>blast<CR>', { desc = '[B]uffer [L]ast' })
+vim.keymap.set('n', '<leader>ba', '<cmd>ball<CR>', { desc = '[B]uffer [A]ll (open all buffers)' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -335,6 +346,7 @@ require('lazy').setup({
         { '<leader>w', group = '[W]orkspace' },
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+        { '<leader>b', group = '[B]uffer' },
       },
     },
   },
