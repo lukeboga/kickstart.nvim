@@ -1025,6 +1025,10 @@ require('lazy').setup({
           visible = true, -- This shows hidden files by default
           hide_dotfiles = false, -- Set to false to show dotfiles
           hide_gitignored = false, -- Set to false to show git ignored files
+          hide_by_name = {
+            '.git',
+            '.github',
+          },
         },
       },
       close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
